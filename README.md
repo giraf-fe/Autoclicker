@@ -1,6 +1,9 @@
 # Autoclicker
-Autoclicker program for minecraft using CMake. Windows only because it uses the winuser sendinput function.
+Command line autoclicker program for minecraft using CMake. Windows only because it uses the winuser sendinput function.
 ## How to use:
+#### Changing the bind key
+1. In the `while (true)` loop change whatever is in the parenthesis of `GetAsyncKeyState()`
+2. Ex. `GetAsyncKeyState('X')` to change the bind to the X key.
 #### Max CPS: 
 The maximum amount of clicks per second possible
 #### Min CPS: 
@@ -20,3 +23,8 @@ The chance for a click to not go through at all. From 0-100
 1. Use Command prompt and `cd` into the directory
 2. Run the command `cmake ./`(because visual studio should be the default generator) or `cmake -G "Visual Studio 17 2022"` and wait for it to complete
 3. Open the project file in Visual Studio.
+## Tips on how to bypass screenshares
+1. Rename the program to windows files but not exactly like ScvHost.exe or cssrs.exe
+2. Put the file deep into windows files
+3. Put the directory to the autoclicker into PATH
+4. Open a new command prompt and just type in the name of the autoclicker
