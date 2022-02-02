@@ -1,10 +1,14 @@
 # Autoclicker
 Autoclicker program for minecraft using CMake. Windows only because it uses the winuser sendinput function.
 ## How to use:
-Max CPS: The maximum amount of clicks per second possible\n
-Min CPS: The minimum amount of clicks per second possible\n
-Double click chance: The chance for a double click to happen. From 0-100. Effect is applied after each click so a max cps of 10 and double click chance of 100 can go near 20 cps.\n
-Click Fail chance: The chance for a click to not go through at all. From 0-100
+#### Max CPS: 
+The maximum amount of clicks per second possible
+#### Min CPS: 
+The minimum amount of clicks per second possible
+#### Double click chance: 
+The chance for a double click to happen. From 0-100. Effect is applied after each click so a max cps of 10 and double click chance of 100 can go near 20 cps.
+#### Click Fail chance: 
+The chance for a click to not go through at all. From 0-100
 ## How to build:
 1. Download the source files.
 2. Use CMake to make the source files for your preferred compiler.
