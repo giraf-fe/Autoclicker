@@ -1,7 +1,7 @@
-﻿// AutoclickerCMake.cpp : Defines the entry point for the application.
+﻿// Autoclicker.cpp : Defines the entry point for the application.
 //
 
-#include "AutoclickerCMake.h"
+#include "Autoclicker.h"
 
 int main()
 {
