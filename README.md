@@ -12,9 +12,17 @@ The minimum amount of clicks per second possible
 The chance for a double click to happen. From 0-100. Effect is applied after each click so a max cps of 10 and double click chance of 100 can go near 20 cps.
 #### Click Fail chance: 
 The chance for a click to not go through at all. From 0-100
+### Fatigue:
+Real Humans can't click consistently for long periods of time and can get tired. This can simulate that.
+#### Fatigue rate:
+The amount of delay to add for each click. If the autoclicker clicks 100 times and this option is at 0.1, The added delay would be 10ms.
+#### Max fatigue delay:
+The maximum amount of delay the fatigue option can add to each click.
+#### Fatigue recovery rate:
+The speed at which to recover stamina. It is recommended to set this to double the fatigue rate.
 ## How to build:
 1. Download the source files.
-2. Use CMake to make the source files for your preferred compiler, though not all of them work.
+2. Use CMake to make the source files for your preferred compiler.
 ### Example build instructions for GCC:
 1. Use Command prompt and `cd` into the directory
 2. Run the command `cmake -G "MinGW Makefiles"` and wait for it to complete

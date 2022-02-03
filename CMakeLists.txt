@@ -6,6 +6,6 @@ cmake_minimum_required (VERSION 3.8)
 project ("Autoclicker")
 
 # Add source to this project's executable.
-add_executable (AutoclickerCMake "Autoclicker.cpp" "Autoclicker.h")
+add_executable (Autoclicker "Autoclicker.cpp" "Autoclicker.h")
 
 # TODO: Add tests and install targets if needed.
