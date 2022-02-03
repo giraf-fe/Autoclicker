@@ -14,7 +14,7 @@ The chance for a double click to happen. From 0-100. Effect is applied after eac
 The chance for a click to not go through at all. From 0-100
 ## How to build:
 1. Download the source files.
-2. Use CMake to make the source files for your preferred compiler.
+2. Use CMake to make the source files for your preferred compiler, though not all of them work.
 ### Example build instructions for GCC:
 1. Use Command prompt and `cd` into the directory
 2. Run the command `cmake -G "MinGW Makefiles"` and wait for it to complete
