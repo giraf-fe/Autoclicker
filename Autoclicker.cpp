@@ -31,9 +31,9 @@ fatigue:
     if (j[0] == 'y')
     {
         dofatigue = true;
-        std::cout << "Fatigue rate (ms of delay for each click, recommended 0.1-0.5):";
+        std::cout << "Fatigue rate (ms of delay for each click, recommended 0.03-0.08):";
         std::cin >> fatiguerate;
-        std::cout << "Max Fatigue delay(in ms, recommended 120ms): ";
+        std::cout << "Max Fatigue delay(in ms, recommended 50ms, anything over 70ms is unrealistic): ";
         std::cin >> maxfatigue;
         std::cout << "Fatigue Recovery rate:";
         std::cin >> fatiguerecovery;
