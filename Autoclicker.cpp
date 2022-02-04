@@ -51,14 +51,16 @@ fatigue:
     std::cout << "Started autoclicker...\n";
     while (true)
     {
-        srand((unsigned)std::chrono::system_clock::now().time_since_epoch().count());
+        bool clicking = false;
+	srand((unsigned)std::chrono::system_clock::now().time_since_epoch().count());
         if (GetAsyncKeyState('X'))
         {
+	    clicking = true;
             if (dofatigue)
             {
                 if (fatigue < (float)maxfatigue)
                 {
-                    fatigue += (fatiguerate)+fatiguerecovery;
+                    fatigue += (fatiguerate);
                 }
             }
             float i = minms + (rand() % range) + fatigue;
@@ -75,7 +77,7 @@ fatigue:
         skip:
             Sleep(i - 10);
         }
-        if (dofatigue && fatigue > 0.0f) { fatigue -= fatiguerecovery; Sleep(minms); }
+        if (dofatigue && fatigue > 0.0f && !clicking) { fatigue -= fatiguerecovery; Sleep(minms); }
     }
     return 0;
 }
