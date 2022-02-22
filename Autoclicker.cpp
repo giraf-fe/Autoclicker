@@ -6,7 +6,7 @@
 int main()
 {
     int cpsmin;
-    int cpsmax;
+    int cpsmax = 0;
     int* debugptr = &cpsmax;
     int doubleclickchance;
     int clickfailchance;
@@ -48,14 +48,15 @@ fatigue:
 
     int range = (1000 / cpsmin) - (1000 / cpsmax);
     float minms = 1000 / cpsmax;
+    bool safety = false;
     std::cout << "Started autoclicker...\n";
     while (true)
     {
         bool clicking = false;
-	srand((unsigned)std::chrono::system_clock::now().time_since_epoch().count());
-        if (GetAsyncKeyState('X'))
+	    srand((unsigned)std::chrono::system_clock::now().time_since_epoch().count());
+        if (GetAsyncKeyState('X') && !safety)
         {
-	    clicking = true;
+	        clicking = true;
             if (dofatigue)
             {
                 if (fatigue < (float)maxfatigue)
@@ -74,10 +75,22 @@ fatigue:
                 Sleep(i / 10);
                 SendInput(2, Click, sizeof(INPUT));
             }
-        skip:
+            skip:
             Sleep(i - 10);
         }
         if (dofatigue && fatigue > 0.0f && !clicking) { fatigue -= fatiguerecovery; Sleep(minms); }
+        if (GetAsyncKeyState(VK_F4)) {
+            if (!safety) {
+                std::cout << "Safety ON." << "\n";
+                safety = true;
+            }
+            else {
+                std::cout << "Safety OFF." << "\n";
+                safety = false;
+            }
+            Sleep(250);
+        }
     }
+
     return 0;
 }
