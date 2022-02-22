@@ -4,6 +4,7 @@ Command line autoclicker program for minecraft using CMake. Windows only because
 #### Changing the bind key
 1. In the `while (true)` loop change whatever is in the parenthesis of `GetAsyncKeyState()`
 2. Ex. `GetAsyncKeyState('X')` to change the bind to the X key.
+3. Same steps to changing the safety key, which is F4.
 #### Max CPS: 
 The maximum amount of clicks per second possible
 #### Min CPS: 
@@ -20,6 +21,8 @@ The amount of delay to add for each click. If the autoclicker clicks 100 times a
 The maximum amount of delay the fatigue option can add to each click.
 #### Fatigue recovery rate:
 The speed at which to recover stamina. It is recommended to set this to double the fatigue rate.
+### Safety button:
+The safety is to allow the user to press the autoclick key and not trigger the autoclicker. A message will appear in the console notifying if the safety has been turned on or off. The default safety key is F4.
 ## How to build:
 1. Download the source files.
 2. Use CMake to make the source files for your preferred compiler.
